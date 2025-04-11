@@ -10,7 +10,7 @@ function Footer() {
         <div className='footer-container'>
             <footer className='footer'>
             <div className='footer-logo'>
-                <img src="/Images/Footer-logo.png" alt="Logo" className='footer-pic' />
+                <img src="/images/Footer-logo.png" alt="Logo" className='footer-pic' />
                 <p>Fighting misinformation in Nigeria <br/>
                 through education and technology</p>
                 <SocialBar />

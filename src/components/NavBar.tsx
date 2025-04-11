@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-logo">
-        <img src="/Images/nav-logo.png" alt="Logo" className="nav-logo" />
+        <img src="/images/nav-logo.png" alt="Logo" className="nav-logo" />
       </div>
 
       <div className="nav-links">

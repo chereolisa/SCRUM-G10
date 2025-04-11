@@ -10,10 +10,10 @@ function Features() {
             <h2>How TruthCheck Works</h2>
 
             <div className='howitworks-images'>
-                <img src='/Images/howitworks1.png' alt='How it works' className='howitworks-image'/>
-                <img src='/Images/howitworks2.png' alt='How it works' className='howitworks-image'/>
-                <img src='/Images/howitworks3.png' alt='How it works' className='howitworks-image'/>
-                <img src='/Images/howitworks4.png' alt='How it works' className='howitworks-image'/>
+                <img src='/images/howitworks1.png' alt='How it works' className='howitworks-image'/>
+                <img src='/images/howitworks2.png' alt='How it works' className='howitworks-image'/>
+                <img src='/images/howitworks3.png' alt='How it works' className='howitworks-image'/>
+                <img src='/images/howitworks4.png' alt='How it works' className='howitworks-image'/>
                 </div>
         </div>
     )
