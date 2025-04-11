@@ -9,6 +9,9 @@ import './i18n'; // Import i18n configuration
 import Footer from './components/Footer'; // Import Footer
 import LanguageSwitcher from './components/LanguageSwitcher'; // Import LanguageSwitcher
 import Info from './components/Info';
+import Features from './components/Features';
+import HowItWorks from './components/HowItWorks';
+
 
 function App() {
   return (
