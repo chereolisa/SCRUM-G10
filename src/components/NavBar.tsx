@@ -8,27 +8,29 @@ function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen)
 
   return (
-    <nav className="bg-blue-500 text-white p-4 sm:p-6 md:p-8">
-      <div className="flex items-center justify-between">
-        <h1 className="text-xl sm:text-2xl md:text-3xl">TRUTH CHECK NIGERIA</h1>
-        <button onClick={toggleMenu} className="lg:hidden p-2 text-white">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
+    <nav className="navbar">
+      <div className="nav-logo">
+        <img src="/src/Images/nav-logo.png" alt="Logo" className="nav-logo" />
       </div>
-      <div className={`lg:flex ${isOpen ? 'block' : 'hidden'}`}>
-        <ul className="flex flex-col lg:flex-row lg:space-x-6 lg:ml-auto">
-          <li>
-            <Link to="/" className="text-white hover:text-blue-300">{'Home'}</Link>
-          </li>
-          <li>
-            <Link to="/signup" className="text-white hover:text-blue-300">{'Sign Up'}</Link>
-          </li>
-          <li>
-            <Link to="/login" className="text-white hover:text-blue-300">{'Login'}</Link>
-          </li>
+
+      <div className="nav-links">
+        <ul>
+          <li><Link className='links' to="/src/pages/Features.tsx">{'Features'}</Link></li>
+          <li><Link className='links' to="/src/pages/Team.tsx">{'Team'}</Link></li>
+          <li><Link className='links' to="/src/pages/HowItWorks.tsx">{'How it works'}</Link></li>
+          <li><Link className='links' to="/src/pages/VerifyNow.tsx">{'Verify Now'}</Link></li>
+          <li><Link className='links' to="/src/pages/FAQ.tsx">{'FAQ'}</Link></li>
         </ul>
+      </div>
+
+      <div className="nav-actions">
+        <button className="signup">
+            <Link to="/signup" className="signup-link">{'Sign Up'}</Link>
+          </button>
+          <button className="login">
+            <Link to="/login" className="login-link">{'Login'}</Link>
+          </button>
+      
       </div>
     </nav>
   )

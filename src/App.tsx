@@ -4,7 +4,11 @@ import Navbar from './components/NavBar';
 import Home from './pages/Home';
 import Signup from './pages/SignUp';
 import Login from './pages/Login';
+import './global.css'; // Import global styles
+import './i18n'; // Import i18n configuration
+import Footer from './components/Footer'; // Import Footer
 import LanguageSwitcher from './components/LanguageSwitcher'; // Import LanguageSwitcher
+import Info from './components/Info';
 
 function App() {
   return (
@@ -22,12 +26,7 @@ function App() {
       </main>
       
       {/* Footer */}
-      <footer className="bg-gray-800 text-white p-4 sm:p-6 md:p-8 text-center">
-        <p>© 2025 SCRUM G10</p>
-      </footer>
-      
-      {/* Language Switcher at Bottom Right */}
-      <LanguageSwitcher />
+        <Footer />
     </div>
   );
 }
