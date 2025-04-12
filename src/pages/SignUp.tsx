@@ -15,16 +15,16 @@ function Signup() {
   }
 
   return (
-    <div>
-      <h2 className="text-2xl font-semibold text-gray-800">Sign Up</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="signup-container">
+      <h2 className="signup-text">Sign Up</h2>
+      <form onSubmit={handleSubmit} className="signup-form">
         <input
           type="text"
           name="username"
           placeholder="Username"
           value={formData.username}
           onChange={handleInputChange}
-          className="w-full px-4 py-2 border rounded-md"
+          className="signup-input"
         />
         <input
           type="email"
@@ -32,7 +32,7 @@ function Signup() {
           placeholder="Email"
           value={formData.email}
           onChange={handleInputChange}
-          className="w-full px-4 py-2 border rounded-md"
+          className="signup-input"
         />
         <input
           type="password"
@@ -40,9 +40,9 @@ function Signup() {
           placeholder="Password"
           value={formData.password}
           onChange={handleInputChange}
-          className="w-full px-4 py-2 border rounded-md"
+          className="signup-input"
         />
-        <button type="submit" className="w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Sign Up</button>
+        <button type="submit" className="signup-button">Sign Up</button>
       </form>
     </div>
   )

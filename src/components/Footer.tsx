@@ -50,7 +50,7 @@ function Footer() {
             
             <div className="copyright">
                 <hr/>
-                <p>©2025 TruthCheck. All Right Reserved</p>
+                <p>©2025 TruthCheck. All Rights Reserved</p>
             </div>
          
         </div>

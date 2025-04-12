@@ -1,38 +1,19 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
+import React, { useEffect } from 'react';
 
-const LanguageSwitcher: React.FC = () => {
-  const { i18n } = useTranslation();
-
-  // Function to change language
-  const changeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
-  };
+function LanguageSwitcher() {
+  useEffect(() => {
+    // Load the Google Translate script dynamically
+    const script = document.createElement('script');
+    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
 
   return (
-    <div className="fixed bottom-4 right-4 flex space-x-2">
-      <button 
-        className="bg-blue-500 text-white p-2 rounded" 
-        onClick={() => changeLanguage('en')}>
-        English
-      </button>
-      <button 
-        className="bg-green-500 text-white p-2 rounded" 
-        onClick={() => changeLanguage('ig')}>
-        Igbo
-      </button>
-      <button 
-        className="bg-red-500 text-white p-2 rounded" 
-        onClick={() => changeLanguage('ha')}>
-        Hausa
-      </button>
-      <button 
-        className="bg-yellow-500 text-white p-2 rounded" 
-        onClick={() => changeLanguage('yo')}>
-        Yoruba
-      </button>
+    <div>
+      <div id="google_translate_element"></div>
     </div>
   );
-};
+}
 
 export default LanguageSwitcher;

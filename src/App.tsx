@@ -11,6 +11,9 @@ import LanguageSwitcher from './components/LanguageSwitcher'; // Import Language
 import Info from './components/Info';
 import Features from './components/Features';
 import HowItWorks from './components/HowItWorks';
+import Team from './pages/Team';
+import FAQ from './pages/FAQ';
+
 
 
 function App() {
@@ -18,13 +21,21 @@ function App() {
     <div className="flex flex-col min-h-screen bg-gray-100">
       {/* Navbar */}
       <Navbar />
+      <div id="google_translate_element"></div>
+      <LanguageSwitcher />
       
+      {/* Hero Section */}
       {/* Main Content */}
       <main className="flex-1 p-4 sm:p-6 md:p-8">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/how-it-works" element={<HowItWorks />} />
+          <Route path="/info" element={<Info />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/faq" element={<FAQ />} />
         </Routes>
       </main>
       
