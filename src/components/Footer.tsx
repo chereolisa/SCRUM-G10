@@ -22,7 +22,7 @@ function Footer() {
                 <ul className='footer-list'>
                     <li><Link to="/">{'Home'}</Link></li>
                     <li><Link to="/src/pages/AboutUs.tsx">{'About Us'}</Link></li>
-                    <li><Link to="/src/pages/FAQ.tsx">{'Our FAQs'}</Link></li>
+                    <li><Link to="/faq">{'Our FAQs'}</Link></li>
                     <li><Link to="/src/pages/Contact.tsx">{'Contact'}</Link></li>
                 </ul>
             </div>
@@ -30,7 +30,7 @@ function Footer() {
             <div className='team'>
                 <h3>Team</h3>
                 <ul className='team-list'>
-                    <li><a href="google.com">Meet the Team</a></li>
+                    <li><Link to="/team">{'Meet the Team'}</Link></li>
                     <li><a href="google.com">Our Mission</a></li>
                     <li><a href="google.com">Contact Us</a></li>
                 </ul>

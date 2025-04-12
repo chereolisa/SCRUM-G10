@@ -13,6 +13,10 @@ import Features from './components/Features';
 import HowItWorks from './components/HowItWorks';
 import Team from './pages/Team';
 import FAQ from './pages/FAQ';
+import VerifyNow from './pages/VerifyNow';
+import Processing from './pages/Processing';
+import Result from './pages/Result';
+import Register from './pages/Register';
 
 
 
@@ -21,9 +25,11 @@ function App() {
     <div className="flex flex-col min-h-screen bg-gray-100">
       {/* Navbar */}
       <Navbar />
-      <div id="google_translate_element"></div>
-      <LanguageSwitcher />
-      
+
+      <div className="translate-wrapper">
+        <div id="google_translate_element"></div>
+      </div>
+
       {/* Hero Section */}
       {/* Main Content */}
       <main className="flex-1 p-4 sm:p-6 md:p-8">
@@ -36,6 +42,10 @@ function App() {
           <Route path="/info" element={<Info />} />
           <Route path="/team" element={<Team />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/verify-now" element={<VerifyNow />} />
+          <Route path="/processing" element={<Processing />} />
+          <Route path="/result" element={<Result />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </main>
       

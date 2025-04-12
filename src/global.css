@@ -475,7 +475,7 @@ h3 {
     position: absolute;
     top: 10px; /* Adjust position as needed */
     right: 10px;
-    z-index: 1000; /* Ensure it appears above other content */
+    /* z-index: 1000; Ensure it appears above other content */
   }
   
   /* Style for the dropdown */
@@ -515,7 +515,7 @@ h3 {
     }
   }
   
-  @media (max-width: 480px) {
+  @media (max-width: 600px) {
     #google_translate_element {
       top: 100px;
       right: 0;
@@ -526,9 +526,141 @@ h3 {
       height: 20px; /* Reduced height on mobile */
     }
   }
-  
-  
 
+  .upload-image {
+    display: block;
+    padding: 10px 20px;
+    color: rgba(31, 59, 115, 1);
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19.6px;
+    letter-spacing: 0%;
+  }
+  
+  .upload-image:hover {
+    color: #020c16;
+  }
+  
+  .verify-image-btn, .verify-text-btn {
+    background-color: rgba(13, 25, 48, 1);
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%; 
+    width: 286px;
+    height: 56px;
+    margin-bottom: 30px;
+    
+  }
+  
+  .verify-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .suggestion-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    gap: 20px;
+    width: 580px;
+    height: 75px;
+    background-color: rgba(233, 235, 241, 1);
+    margin-top: 20px;
+  }
+
+    .suggestion-btn {
+        background-color: rgba(255, 255, 255, 1);
+        display: inline-block;
+        padding: 10px 20px;
+        color: rgba(46, 46, 46, 1);
+        border-radius: 8px;
+        text-decoration: none;
+        cursor: pointer;
+        text-align: center;
+        border: none;
+        font-family: Inter;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0%; 
+        width: 160px;
+        height: fit-content;
+        
+    }
+
+    .recent-checks {
+        background-color: #fff;
+        padding: 20px;
+        width: 300px;
+        margin-top: -120px;
+
+    }
+
+
+    .verify-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 120px;
+    }
+
+
+    .verify-input {
+        width: 100%;
+        height: 103px;
+        max-width: 600px;
+        border-radius: 8px;
+        border: 1px solid rgba(233, 235, 241, 1);
+    }
+
+    .verify-form form{
+      width: 100%;
+      max-width: 100%;
+      padding: 50px;
+      text-align: center;
+  }
+
+
+
+
+
+    @media (max-width: 600px) {
+        
+        .verify-form form{
+            width: 100%;
+            max-width: 100%;
+            padding: 50px;
+        }
+        
+        .verify-image-btn, .verify-text-btn {
+            width: 100px;
+            height: fit-content;
+            font-size: 12px;
+        }
+
+        .suggestion-buttons {
+          display: none;
+            
+        }
+
+    }
   
 
   

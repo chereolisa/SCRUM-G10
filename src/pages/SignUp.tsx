@@ -1,17 +1,46 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function Signup() {
   const [formData, setFormData] = useState({ username: '', email: '', password: '' })
+  const navigate = useNavigate()  // For redirecting after sign-up
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setFormData(prevState => ({ ...prevState, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log(formData)
-    // Handle form submission logic here (e.g., send data to API)
+
+    // Example API URL for signup (replace with your actual API endpoint)
+    const signupUrl = 'https://your-api-url.com/signup'
+
+    try {
+      const response = await fetch(signupUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData), // Send username, email, and password
+      })
+
+      if (!response.ok) {
+        throw new Error('Sign up failed')
+      }
+
+      const data = await response.json()
+      console.log('Signed up successfully:', data)
+
+      // You can store user data or token here (e.g., in localStorage or global state)
+      localStorage.setItem('userToken', data.token)
+
+      // After successful sign-up, navigate to the VerifyNow page
+      navigate('/verifynow')
+    } catch (err) {
+      alert('Sign up failed. Please try again.')
+      console.error(err)
+    }
   }
 
   return (

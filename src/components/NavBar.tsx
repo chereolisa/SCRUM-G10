@@ -15,13 +15,19 @@ function Navbar() {
         <img src="/images/nav-logo.png" alt="Logo" className="nav-logo" />
       </div>
 
+
+      <div className="language-btn">
+        <LanguageSwitcher />
+      </div>
+
+
       {/* Navigation Links */}
       <div className={`nav-links ${isOpen ? 'active' : ''}`}>
         <ul>
           <li><Link className='links' to="/src/pages/Features.tsx" onClick={closeMenu}>{'Features'}</Link></li>
           <li><Link className='links' to="/team" onClick={closeMenu}>{'Team'}</Link></li>
           <li><Link className='links' to="/howitworks" onClick={closeMenu}>{'How it works'}</Link></li>
-          <li><Link className='links' to="/src/pages/VerifyNow.tsx" onClick={closeMenu}>{'Verify Now'}</Link></li>
+          <li><Link className='links' to="/verify-now" onClick={closeMenu}>{'Verify Now'}</Link></li>
           <li><Link className='links' to="faq" onClick={closeMenu}>{'FAQ'}</Link></li>
         </ul>
       </div>

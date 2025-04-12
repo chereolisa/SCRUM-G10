@@ -1,17 +1,47 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function Login() {
   const [formData, setFormData] = useState({ email: '', password: '' })
+  const navigate = useNavigate()
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setFormData(prevState => ({ ...prevState, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log(formData)
-    // Handle form submission logic here (e.g., send data to API)
+    console.log('Form submitted:', formData)
+  
+    // Your API login URL
+    const loginUrl = 'https://your-api-url.com/login'
+  
+    try {
+      const response = await fetch(loginUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData), // Sending email and password as JSON
+      })
+  
+      if (!response.ok) {
+        throw new Error('Login failed')
+      }
+  
+      const data = await response.json()
+      console.log('Logged in successfully:', data)
+  
+      // Example: Save user data or token (localStorage or state management)
+      localStorage.setItem('userToken', data.token) // Or set in global state
+  
+      // Redirect to the VerifyNow page after successful login
+      navigate('/verify-now')
+    } catch (err) {
+      alert('Login failed. Please try again.')
+      console.error(err)
+    }
   }
 
   return (
@@ -25,6 +55,7 @@ function Login() {
           value={formData.email}
           onChange={handleInputChange}
           className="login-input"
+          required
         />
         <input
           type="password"
@@ -33,6 +64,7 @@ function Login() {
           value={formData.password}
           onChange={handleInputChange}
           className="login-input"
+          required
         />
         <button type="submit" className="login-button">Login</button>
       </form>
